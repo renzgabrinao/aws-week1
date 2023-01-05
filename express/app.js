@@ -31,7 +31,7 @@ app.post("/api/pokemons", (req, res) => {
     level: data.level
   }
   pokemons.push(response)
-  res.redirect(req.get('referer'))
+  res.redirect('/')
 })
 
 const port = process.env.PORT || 8080
