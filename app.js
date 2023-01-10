@@ -4,6 +4,9 @@ const app = express();
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
+// Before the other routes
+app.use(express.static("dist"))
+
 const pokemons = [
   {
     id: 1,
